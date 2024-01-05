@@ -147,10 +147,14 @@ export default function signup() {
         <View className="items-center justify-center">
           {/* actually this should go to signup complete ui */}
           {/* <Link href="/createAvatar" asChild> */}
-          <Pressable onPress={handleSubmit} style={styles.button} className="mt-5 self">
-            <Text style={styles.btnText}>Sign Up</Text>
+
+          <Pressable onPress={handleSubmit} style={({ pressed }) => [{ backgroundColor: pressed ? '#010B42' : '#1A2251' }, styles.button]}>
+            {({ pressed }) => (
+              <Text style={[{ color: pressed ? 'white' : 'white' }, styles.btnText]}>
+                Sign Up
+              </Text>
+            )}
           </Pressable>
-          {/* </Link> */}
           <Link href="/login" asChild>
             <Text style={styles.signupText} className='mt-4'>Already have an account? Sign in!</Text>
           </Link>
@@ -184,8 +188,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     marginHorizontal: 'auto',
     borderRadius: 50,
-    backgroundColor: '#1A2251',
+    // backgroundColor: '#1A2251',
     width: 200,
+    marginTop: 25
   },
   btnText: {
     fontSize: 17,

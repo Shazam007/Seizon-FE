@@ -2,15 +2,16 @@ import { View, Text, StyleSheet, TextInput, SafeAreaView, Pressable, Image } fro
 import React from 'react'
 
 interface TitleProps {
-    kcal: string;
-  }
+  kcal: string;
+  onPress?: () => void;
+}
 
-const CommonButton = ({ kcal }:TitleProps) => {
-    return (
-      <Pressable style={styles.manageButtons} className="mt-2 self">
-        <Text style={styles.btnText}>{kcal}</Text>
-      </Pressable>
-      )
+const CommonButton = ({ kcal, onPress }: TitleProps) => {
+  return (
+    <Pressable onPress={onPress} style={styles.manageButtons} className="mt-2 self">
+      <Text style={styles.btnText}>{kcal}</Text>
+    </Pressable>
+  )
 };
 
 export default CommonButton;
@@ -27,8 +28,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: '#4C59A4',
     width: 100,
-    marginRight:10,
-    marginTop:10
+    marginRight: 10,
+    marginTop: 10
   },
   btnText: {
     fontSize: 17,
@@ -37,11 +38,11 @@ const styles = StyleSheet.create({
     letterSpacing: 0.25,
     color: 'white',
   },
-      timeBtnSubText: {
-        fontSize: 9,
-        lineHeight: 21,
-        fontWeight: '400',
-        letterSpacing: 0.25,
-        color: 'white',
-      },
+  timeBtnSubText: {
+    fontSize: 9,
+    lineHeight: 21,
+    fontWeight: '400',
+    letterSpacing: 0.25,
+    color: 'white',
+  },
 })

@@ -20,28 +20,9 @@ export default function home() {
   //   };
 
   return (
-    <SafeAreaView className="flex-1 bg-white justify-center">
-      {/* search bar */}
-      <View className="mx-5 mb-4" style={{ flexDirection: 'row' }}>
-        {/* user avatar icon */}
-        <Image
-          style={styles.image}
-          source={require('../../assets/images/app/scaled.png')}
-        />
-        {/* username */}
-        <Text style={styles.text} className="font-bold text-neutral-700">Sign In</Text>
-
-        {/* userlevel and progress bar */}
-
-        <View className="items-center justify-center"></View>
-
-      </View>
-
-      <View>
-        <Progress.Bar progress={0.5} width={200} height={20} color="#00f" borderWidth={2} />
-      </View>
-
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text>Mountain View</Text>
+    </View>
   )
 }
 

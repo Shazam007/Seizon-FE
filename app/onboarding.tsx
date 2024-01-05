@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ImageBackground, Button, Pressable } from 'react-native'
-import React, {useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Image } from 'expo-image'
 import { Link, router } from 'expo-router'
@@ -32,57 +32,57 @@ export default function Onboarding() {
   return (
     <View style={styles.container}>
       <ImageBackground source={require('../assets/images/splash.png')} style={styles.image}>
-      <Link href="/login" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.btnText}>Continue</Text>
-        </Pressable>
-     </Link>
-    </ImageBackground>
+        <Link href="/login" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.btnText}>Continue</Text>
+          </Pressable>
+        </Link>
+      </ImageBackground>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-    image: {
-        flex: 1,
-        width: '100%',
-        backgroundColor: '#0553',
-        justifyContent: 'flex-end',
-        alignItems:'center'
-      },
-    // image: {
-    //     flex: 1,
-    //     resizeMode: 'cover',
-    //     justifyContent: 'center',
-    //   },
-    text: {
-        color: 'white',
-        fontSize: 42,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        backgroundColor: '#000000a0',
-      },
-    button: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: 15,
-        paddingHorizontal: 32,
-        borderRadius: 50,
-        backgroundColor: 'white',
-        width: 200,
-        bottom:80
-      },
-    btnText: {
-        fontSize: 17,
-        lineHeight: 21,
-        fontWeight: '400',
-        letterSpacing: 0.25,
-        color: '#1D1C3B',
-      },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: '#0553',
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  // image: {
+  //     flex: 1,
+  //     resizeMode: 'cover',
+  //     justifyContent: 'center',
+  //   },
+  text: {
+    color: 'white',
+    fontSize: 42,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: '#000000a0',
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 15,
+    paddingHorizontal: 32,
+    borderRadius: 50,
+    backgroundColor: 'white',
+    width: 200,
+    bottom: 80
+  },
+  btnText: {
+    fontSize: 17,
+    lineHeight: 21,
+    fontWeight: '400',
+    letterSpacing: 0.25,
+    color: '#1D1C3B',
+  },
 })
